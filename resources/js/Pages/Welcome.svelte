@@ -1,10 +1,12 @@
 <script context="module">
-  import Layout from '@/Shared/Layout.svelte'
+  import Layout, { title } from '@/Shared/Layout.svelte'
 
   export const layout = Layout
 </script>
 
 <script>
+  import { inertia } from '@inertiajs/inertia-svelte'
+  $title = 'Welcome'
   export let user
 </script>
 
