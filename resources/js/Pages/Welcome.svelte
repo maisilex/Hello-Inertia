@@ -5,7 +5,7 @@
 
 <script>
 
-  export let user = 'Alex'
+  export let user = 'Joe'
 </script>
 
 <h1>Welcome</h1>

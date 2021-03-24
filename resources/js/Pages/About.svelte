@@ -11,4 +11,4 @@
 
 
 <h1>Welcome</h1>
-<p>Hello {user = 'Alex'}, welcome to your first Inertia app!</p>
+<p>Hello {user = 'Joe'}, welcome to your first Inertia app!</p>
