@@ -1,3 +1,12 @@
+<script>
+  // const menu = document.querySelector(".mobile-menu")
+
+  const handleClick = () => {
+    alert('Clicked!')
+    // menu.classList.toggle("hidden") ERROR
+  }
+</script>
+
 <!-- navbar goes here -->
 <nav class="bg-gray-100">
   <div class="max-w-6xl mx-auto px-4">
@@ -29,7 +38,7 @@
 
       <!-- mobile button goes here -->
       <div class="md:hidden flex items-center">
-        <button class="mobile-menu-button">
+        <button on:click={handleClick} class="mobile-menu-button">
           <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
