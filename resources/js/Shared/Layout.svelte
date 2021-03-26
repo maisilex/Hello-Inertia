@@ -11,12 +11,15 @@
   // import Icon from '@/Shared/Icon.svelte'
   // import Logo from '@/Shared/Logo.svelte'
   // import MainMenu from '@/Shared/MainMenu.svelte'
+  import Navbar from '@/Shared/Navbar.svelte'
 </script>
 
 <svelte:head>
   <title>{$title ? `${$title} - Demo App` : 'Demo App'}</title>
 </svelte:head>
 
-<main class="bg-gray-200 min-h-screen flex justify-center items-center">
+<Navbar />
+
+<main class="bg-white min-h-screen flex justify-center items-center">
   <slot />
 </main>

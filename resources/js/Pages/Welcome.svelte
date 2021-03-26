@@ -4,7 +4,7 @@
 </script>
   
 <script>
-  // TODO: Navbar
+  // TODO: 
   // import { inertia, page } from '@inertiajs/inertia-svelte'
   // import { route } from '@/Utils'
   // import Icon from '@/Shared/Icon.svelte'
