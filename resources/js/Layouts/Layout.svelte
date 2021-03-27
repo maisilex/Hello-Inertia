@@ -11,7 +11,7 @@
   // import Icon from '@/Shared/Icon.svelte'
   // import Logo from '@/Shared/Logo.svelte'
   // import MainMenu from '@/Shared/MainMenu.svelte'
-  import Navbar from '@/Shared/Navbar.svelte'
+  import Navbar from '@/Layouts/Navbar.svelte'
 </script>
 
 <svelte:head>
