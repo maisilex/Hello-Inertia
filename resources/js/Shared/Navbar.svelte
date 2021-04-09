@@ -1,4 +1,10 @@
 <script>
+  import { inertia, page } from '@inertiajs/inertia-svelte'
+  
+  $: isUrl = (...urls) => {
+    return urls.filter(url => $page.url.match(url)).length
+  }
+  
   const handleClick = () => {
     document.querySelector(".mobile-menu").classList.toggle("hidden")
   }
@@ -22,8 +28,12 @@
 
         <!-- primary nav -->
         <div class="hidden md:flex items-center space-x-1">
-          <a href="/f" class="py-5 px-3 text-gray-700 hover:text-gray-900">Features</a>
-          <a href="/p" class="py-5 px-3 text-gray-700 hover:text-gray-900">Pricing</a>
+          <a href="/" class="py-5 px-3   {isUrl('/$') ? 'text-yellow-500 underline' : 'text-gray-700 group-hover:text-yellow-500'}" use:inertia>Home</a>
+          <a href="/about" class="py-5 px-3   {isUrl('/about/*') ? 'text-yellow-500 underline' : 'text-gray-700 group-hover:text-yellow-500'}" use:inertia>About</a>
+          <a href="/contact" class="py-5 px-3 {isUrl('/contact/*') ? 'text-yellow-500 underline' : 'text-gray-700 group-hover:text-yellow-500'}" use:inertia>Contact</a>
+
+
+
         </div>
       </div>
 
@@ -47,8 +57,8 @@
 
   <!-- mobile menu -->
   <div class="mobile-menu hidden md:hidden">
-    <a href="/f" class="block py-2 px-4 text-sm hover:bg-gray-200">Features</a>
-    <a href="/s" class="block py-2 px-4 text-sm hover:bg-gray-200">Pricing</a>
+    <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-200" use:inertia>About</a>
+    <a href="/contact" class="block py-2 px-4 text-sm hover:bg-gray-200" use:inertia>Contact</a>
   </div>
 </nav>
 

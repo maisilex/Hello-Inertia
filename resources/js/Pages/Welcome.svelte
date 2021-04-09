@@ -1,5 +1,5 @@
 <script context="module">
-  import Layout, { title } from '@/Layouts/Layout.svelte'
+  import Layout, { title } from '@/Shared/Layout.svelte'
   export const layout = Layout
 </script>
   
