@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-const path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,31 +12,14 @@ const path = require('path');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    // .vue()
     .postCss('resources/css/app.css', 'public/css', [
-        //
-        require("tailwindcss"),
+        require('postcss-import'),
+        require('tailwindcss'),
+        require('autoprefixer'),
     ])
-    .webpackConfig({
-        output: { chunkFilename: 'js/[name].js?id=[chunkhash]' },
-        resolve: {
-          extensions: ['.js', '.svelte'],
-          mainFields: ['svelte', 'browser', 'module', 'main'],
-          alias: {
-            '@': path.resolve('resources/js'),
-          },
-        },
-        module: {
-          rules: [
-            {
-              test: /\.(svelte)$/,
-              use: {
-                loader: 'svelte-loader',
-                options: {
-                  emitCss: true,
-                  hotReload: true,
-                },
-              },
-            },
-          ],
-        },
-      });
+    .webpackConfig(require('./webpack.config'));
+
+if (mix.inProduction()) {
+    mix.version();
+}
