@@ -1,6 +1,7 @@
 <script context="module">
   import { writable } from 'svelte/store'
   export const title = writable(null)
+  export const metaTitle = writable(null)
 </script>
 
 <script>
@@ -19,7 +20,7 @@
    <title>{$title ? `${$title} - Demo App` : 'Demo App'}</title>
   
 
-   <meta name="title" content="Example Title">
+   <meta name="title" content="{$metaTitle ? `${$metaTitle} - Demo Meta Title` : 'Demo Meta Title'}">
    <meta name="description" content=" Example description">
      
      <!-- Open Graph / Facebook -->
