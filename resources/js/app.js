@@ -1,6 +1,9 @@
 // require('./bootstrap');
 
 import { App } from '@inertiajs/inertia-svelte'
+import { InertiaProgress } from '@inertiajs/progress'
+
+InertiaProgress.init()
 
 const el = document.getElementById('app')
 
