@@ -21,6 +21,6 @@
   
 <h1 class="text-6xl sm:text-8xl">Contact page</h1>
 
-<div class="mt-10 text-4xl sm:text-6xl text-gray-500">
+<div class="mt-10 text-2xl sm:text-6xl text-gray-500">
   Laravel v{ laravelVersion } (PHP v{ phpVersion }) 
 </div>
